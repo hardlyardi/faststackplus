@@ -1,11 +1,19 @@
 --!strict
 --!native
---!optimize 2
+--!optimize 3
 
 local function duplicator(...)
 	coroutine.yield()
 	coroutine.yield(...)
 	duplicator(coroutine.yield(...))
+end
+
+local function popper(_, ...)
+	return ...
+end
+
+local function shouldpush(...)
+	return (...) ~= nil and not pcall(bit32.bor, 0, ...)
 end
 
 local dthread = coroutine.create(duplicator)
@@ -17,12 +25,12 @@ local function dupe(...)
 		dthread = new
 		n = 0
 	end
-	return select(2, coroutine.resume(dthread, ...))
+	return popper(coroutine.resume(dthread, ...))
 end
 
 local function storage(...)
 	dupe(coroutine.yield(...))
-	if select("#", dupe()) ~= 0 then
+	if shouldpush(dupe()) then
 		local top = dupe()
 		storage(top, ...) --
 	end
@@ -37,11 +45,11 @@ function create(...)
 		n += 1
 		if n >= 0x4E1C then
 			local new = coroutine.create(storage)
-			coroutine.resume(new, select(2, coroutine.resume(tthread, ...)))
+			coroutine.resume(new, popper(coroutine.resume(tthread, ...)))
 			tthread = new
 			n = 0
 		end
-		return select(2, coroutine.resume(tthread, ...))
+		return popper(coroutine.resume(tthread, ...))
 	end
 	push(...)
 	return push
