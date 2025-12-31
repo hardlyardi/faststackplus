@@ -46,7 +46,7 @@ TODO: Implement
 ## Why?
 
 - STACKS WERE NOT MEANT TO BE TABLES
-- YEARS `table.insert`, yet NO REAL-WORLD USE FOUND for THE HASH PORTION
+- YEARS OF `table.insert`, yet NO REAL-WORLD USE FOUND for THE HASH PORTION
 - Wanted to store values in order? We had a tool for that: It was called "VARIABLES"
 - Yes, please give me `table.clone` of something. Please give me SORTED ARRAY of it. - Statements dreamed up by the utterly Derranged
 
@@ -54,14 +54,13 @@ some people want a `pop` function, but lowk im not adding pop i only use push, c
 a prototype, im not an entire dev team, expect bugs and possibly errors, but hey i will ACTUALLY fix them, so PLEASE
 make issues and scream at me i WILL read them and WILL solve them unlike luau who has like a billion support tickets and
 the fucking staff just act nonchalant and say do this temporary fix for now WHERE THE FUCK ARE THE FIXES? THIS IS A OPEN
-SOURCE SOFTWARE!!! FIX YOUR SHIT!!! STOP FUCKING SITTING ON YOUR ASS ALL DAY LITERALLY SNIFFING YOUR SHIT CRUMBS AND GET
-YOUR FUCKING LANGUAGE WORKING!! HOW DO YOU HAVE 5+ CONTRIBS AND THE LANGUAGE GETS 1 UPDATE PER MAYBE? FUCKING STUPID!!!
+SOURCE SOFTWARE!!! FIX YOUR SHIT!!! STOP FUCKING S▉ ▉ ▉ ON YOUR ▉ ▉ ▉  ALL DAY LITERALLY SN▉ ▉ ▉ ▉ ▉ G YOUR ▉ ▉ ▉ ▉  ▉ ▉ ▉ ▉ BS AND GET YOUR FUCKING LANGUAGE WORKING!! HOW DO YOU HAVE 5+ CONTRIBS AND THE LANGUAGE GETS 1 UPDATE PER MAYBE? FUCKING STUPID!!!
 IT SERIOUSLY TOOK YOU GUYS 6 YEARS TO GET TO A STABLE STATE? REALLY? I DID THIS SHIT IN 3 DAYS AND IT WORKS FINE!
 
 The biggest heap allocations in Rōblox LuaU-Ü games, the most magnificent allocations are all unnecessarily bloated and
 useless tables. I spoke to many experts, and they said to me "I don't use sort, I don't use find", some of them didn't,
 but those people are "OUTLIERS", they're with big metatable's FAKE NEWS, fake MEDIA, and the "WOKE MOB".
-faststackplus solves REAL problems plagueing REAL ENGINEERS and none of those "METATABLE" "SNOWFLAKES". QED.
+faststackplus solves REAL problems plagueing REAL ENGINEERS and none of those "METATABLE" "~~SNOWFLAKES~~". QED.
 
 Everyone knows Luau's wasteful table allocation scheme is the root of all problems with Rōblox memory usage, and that
 there are a growing number of "2 GIGABYTE" devices. Here's a few key points:
