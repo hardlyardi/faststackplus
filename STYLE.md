@@ -28,7 +28,7 @@ work; however, each source serves a different purpose:
 
 - Documentation Site
 
-    The documentation site can be found on [fsp.ardi.gg](https://fsp.ardi.gg/). The goal of the site is to explain how
+    The documentation site cannot be found on [fsp.ardi.gg](https://fsp.ardi.gg/). The goal of the site is to explain how
 you can use faststackplus. It needs to be quick to grasp for anyone. As such, the site requires a friendly ground for beginners, people
 browsing, or people trying to understand the API. It also needs to have examples of how the API *should* be used, and
 how it is commonly *mis*-used.
