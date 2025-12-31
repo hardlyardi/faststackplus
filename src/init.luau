@@ -33,9 +33,10 @@ local function storage(...)
 	if shouldpush(dupe()) then
 		local top = dupe()
 		storage(top, ...) --
-	end
-	dupe()
-	storage(...)
+	else
+	    dupe()
+	    storage(...)
+    end
 end
 
 function create(...)
