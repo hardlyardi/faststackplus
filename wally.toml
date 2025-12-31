@@ -1,8 +1,8 @@
 [package]
 name = "hardlyardi/faststackplus"
-version = "0.1.0"
+version = "0.5.3-dontuse-rc67-yeast-nightly3"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
-license = "MIT"
+license = "Hot Potato"
 
 [dependencies]

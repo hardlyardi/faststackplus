@@ -93,4 +93,9 @@ As those of you in America can clearly see, `1/4` is a longer period of time tha
 
 ## Installation
 
-You can install faststackplus via [Wally](https://wally.run/package/hardlyardi/faststackplus?version=0.1.0).
+You can install faststackplus via [Wally](https://wally.run/package/hardlyardi/faststackplus?version=0.5.3-dontuse-rc67-yeast-nightly3):
+
+```toml
+[dependencies]
+faststackplus = "hardlyardi/faststackplus@0.5.3-dontuse-rc67-yeast-nightly3"
+```
