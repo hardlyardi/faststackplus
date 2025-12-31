@@ -1,0 +1,5 @@
+[tools]
+lune = "lune-org/lune@0.10.4"
+stylua = "JohnnyMorganz/StyLua@2.3.1"
+wally = "UpliftGames/wally@0.3.2"
+luaulsp = "JohnnyMorganz/luau-lsp@1.59.0"

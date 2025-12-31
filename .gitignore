@@ -1,0 +1,20 @@
+# User Settings
+/.vscode
+
+# Rojo Sourcemap
+/sourcemap.json
+
+# Suite
+_TESTSUITE/**
+_BENCHSUITE/**
+
+# Place files
+**.rbxl*
+
+# JS
+node_modules/
+**/.vitepress/dist
+**/.vitepress/cache
+
+# Lock files
+**.lock
