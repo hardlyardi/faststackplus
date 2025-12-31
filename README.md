@@ -1,6 +1,6 @@
 # faststackplus?
 
-faststackplus is a robust, fast, and lightweight stack implementation for Luau. It is **TABLE-FREE** and enables
+faststackplus is a robust, fast, and lightweight stack implementation for LuaU-Ü. It is **TABLE-FREE** and enables
 maximum performance, powering Rōblox "Play People" to create extremely efficient Moments In Experience on The Block,
 enabling the formation of "Core Memories" with 4 Dimensional AI Generation.
 
@@ -18,7 +18,7 @@ print(object())
 ## Example: Indexing a stack
 
 ```lua
-local object = stack.new(4, 3, 2, 1)
+local object = stack("create")(4, 3, 2, 1)
 
 -- "2"
 print((select(3, object())))
@@ -30,7 +30,7 @@ print((select(3, object())))
 local stack = require(`@faststackplus/`)
 
 -- constructs the stack with zero initial elements
-local object = stack.new()
+local object = stack("create")()
 object(1)
 -- "1"
 print(object())
@@ -62,17 +62,17 @@ useless tables. I spoke to many experts, and they said to me "I don't use sort, 
 but those people are "OUTLIERS", they're with big metatable's FAKE NEWS, fake MEDIA, and the "WOKE MOB".
 faststackplus solves REAL problems plagueing REAL ENGINEERS and none of those "METATABLE" "~~SNOWFLAKES~~". QED.
 
-Everyone knows Luau's wasteful table allocation scheme is the root of all problems with Rōblox memory usage, and that
+Everyone knows LuaU-Ü's wasteful table allocation scheme is the root of all problems with Rōblox memory usage, and that
 there are a growing number of "2 GIGABYTE" devices. Here's a few key points:
 
-- Luau tables are hard to understand. What do you mean "Array Part", "Hash Part"? "Boundary"? Nonsense. Length checking
+- LuaU-Ü tables are hard to understand. What do you mean "Array Part", "Hash Part"? "Boundary"? Nonsense. Length checking
 has never been easier than it is today, thanks to me, and only me, it's the greatest it's ever been, many experts are
 saying this.
 - As we all know, coroutines are very fast. So, the internals for faststack+ use purely coroutines for optimization
 purposes.
 - Since other operations are useless and trivial, faststack+ only provides methods for "read" and "push" to a stack.
 This ensures maximum performance.
-- Written in pure Luau as Jod intended, by an expert in the industry.
+- Written in pure LuaU-Ü as Jod intended, by an expert in the industry.
 
 ## Performance
 
