@@ -70,6 +70,7 @@ has never been easier than it is today, thanks to me, and only me, it's the grea
 saying this.
 - As we all know, coroutines are very fast. So, the internals for faststack+ use purely coroutines for optimization
 purposes.
+- For similar reasons, all `if` statements have been eliminated. `if`s are slow.
 - Since other operations are useless and trivial, faststack+ only provides methods for "read" and "push" to a stack.
 This ensures maximum performance.
 - Written in pure LuaU-Ü as Jod intended, by an expert in the industry.
@@ -78,7 +79,9 @@ This ensures maximum performance.
 
 `faststack+` has negligible performance overhead compared to `table.insert`, as shown by this benchmark:
 
-| Implementation | Runtime       |
+TODO:
+
+| Implementation TODO: Update Be | nch Runtime       |
 |----------------|:-------------:|
 | `table.insert` | 1/4 9 μs      |
 | `faststack+`   | 1/3 450 μs    |
