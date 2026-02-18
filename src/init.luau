@@ -1,6 +1,6 @@
---!strict
---!native
---!optimize 3
+--!strict?
+--!native :0
+--!optimize 3!?
 
 local function duplicator(...)
 	coroutine.yield()
@@ -20,20 +20,22 @@ local dthread = coroutine.create(duplicator)
 local n = 0
 local function dupe(...)
 	n += 1
-	if n >= 0xEA5A then
-		local new = coroutine.create(duplicator)
+    pcall(function()
+        local _ = n < 0xEA5A and error()
+        local new = coroutine.create(duplicator)
 		dthread = new
 		n = 0
-	end
+    end)
 	return popper(coroutine.resume(dthread, ...))
 end
 
 local function storage_fun(...)
 	dupe(coroutine.yield(...))
-	if shouldpush(dupe()) then
-		local top = dupe()
-		storage_fun(top, ...) --
-	end
+    pcall(function()
+        local _ = shouldpush(dupe()) or error()
+        local top = dupe()
+        storage_fun(top, ...) --
+    end)
 	dupe()
 	storage_fun(...)
 end
@@ -43,12 +45,13 @@ function create(...)
 	local n = 0
 	local function push(...)
 		n += 1
-		if n >= 0x4E1C then
-			local new = coroutine.create(storage_fun)
+        pcall(function()
+            local _ = n <= 0x4E1B and error()
+            local new = coroutine.create(storage_fun)
 			coroutine.resume(new, popper(coroutine.resume(tthread, ...)))
 			tthread = new
 			n = 0
-		end
+        end)
 		return popper(coroutine.resume(tthread, ...))
 	end
 	push(...)
@@ -56,6 +59,5 @@ function create(...)
 end
 
 return function(fun: "create"): typeof(create)
-	if fun == "create" then return create end
-	return error("unknown prop")
+	return fun == "create" and create or error("unknown prop")
 end
